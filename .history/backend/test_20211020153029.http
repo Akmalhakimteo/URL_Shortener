@@ -1,0 +1,30 @@
+###
+POST http://localhost:8080/api/shorts
+Content-Type: application/json
+
+{
+    "shortURL":"localhost:8080/hj28dnm3",
+    "actualURL":"https://developer.ibm.com/tutorials/docker-dev-db/"
+}
+
+###
+GET http://localhost:8080
+
+### 
+POST http://localhost:8080/api/url/shorten
+Content-Type: application/json
+
+{
+    "longURL":"https://shopee.sg/%F0%9F%87%B8%F0%9F%87%AC-LOCAL-SELLER-Laptop-Stand-Foldable-Adjustable-Height-Laptop-Stand-Fits-all-Laptop-including-MacBook-i.360913914.10433386171"
+}
+
+
+### 
+POST http://localhost:8080/api/url/shorten
+Content-Type: application/json
+
+{
+     "longURL":"https://www.amazon.com/dp/B08KWP879N/ref=sspa_dk_detail_3?pd_rd_i=B08KWP879N&pd_rd_w=8An5g&pf_rd_p=9fd3ea7c-b77c-42ac-b43b-c872d3f37c38&pd_rd_wg=7bk0W&pf_rd_r=FG7SPY1X1M4HJ49E6DPH&pd_rd_r=8ec45d06-c47a-488b-95da-c19eb5bb4ac5&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzUE8zUzRSMTcxOVlRJmVuY3J5cHRlZElkPUEwOTU0NzUwMVNJQ1VLUFNSQkFBVyZlbmNyeXB0ZWRBZElkPUEwMTg3NDE0MVRTR0pGODdJRlExSiZ3aWRnZXROYW1lPXNwX2RldGFpbCZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU&th=1"
+}
+
+###
