@@ -13,14 +13,17 @@ router.get("/:code", async (req, res) => {
     // fullURL = baseURL + '/' + req.params.code
     // let url = await Short.findOne({ where: {shortURL: fullURL} });
     code = req.params.code;
+    if (code) {
+      let url = await Short.findByPk(code);
 
-    let url = await Short.findByPk(code);
-
-    if (url) {
-      return res.redirect(url.actualURL);
+      if (url) {
+        return res.redirect(url.actualURL);
+      } else {
+        console.log(url);
+        return res.status(404).json("No URL found");
+      }
     } else {
-      console.log(url);
-      return res.status(404).json("No URL found");
+      return res.
     }
   } catch (error) {
     console.error(error);

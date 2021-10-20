@@ -12,9 +12,7 @@ router.get("/:code", async (req, res) => {
   try {
     // fullURL = baseURL + '/' + req.params.code
     // let url = await Short.findOne({ where: {shortURL: fullURL} });
-    code = req.params.code;
-
-    let url = await Short.findByPk(code);
+    let url = await Short.findByPk()
 
     if (url) {
       return res.redirect(url.actualURL);

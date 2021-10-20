@@ -12,8 +12,8 @@ const Short = db.shorts;
 router.post("/shorten", async (req, res) => {
   const { longURL: actualURL } = req.body;
   const baseUrl = config.get("baseUrl");
-  console.log(actualURL);
-  console.log(baseUrl);
+  console.log(actualURL)
+  console.log(baseUrl)
   //check base url
   if (!validUrl.isUri(actualURL)) {
     return res.status(401).json("Invalid base url");
@@ -35,13 +35,8 @@ router.post("/shorten", async (req, res) => {
           actualURL: actualURL,
         };
 
-        const shortToSave = {
-          shortURL: urlCode,
-          actualURL: actualURL,
-        };
-
-        await Short.create(shortToSave);
-        res.json(shortToReturn);
+        await Short.create(short);
+        res.json(short);
       }
     } catch (err) {
       console.error(err);
