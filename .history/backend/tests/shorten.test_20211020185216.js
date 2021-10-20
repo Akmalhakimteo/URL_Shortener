@@ -1,6 +1,7 @@
-const {helper} = require('../utils/helper')
+const helper = require('../utils/helper')
 const {Short} = require('../models/short.model')
-const supertest = require('../server')
+const supertest = require('supertest')
+const app = require('../app')
 const api = supertest(app)
 
 
