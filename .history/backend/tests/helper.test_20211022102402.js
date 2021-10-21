@@ -56,7 +56,7 @@ describe("Test URL Validator ",()=>{
   })
 
   test.each(goodURLs)("url (%j) should be good URL",(url)=>{
-    expect(()=>helper.isBadURL(url)).not.toBe(true)
+    expect(()=>helper.isBadURL(url)).toBe
   })
 
 

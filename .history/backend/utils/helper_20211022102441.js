@@ -23,4 +23,8 @@ const isBadURL = (url) => {
   }
 };
 
+console.log(isBadURL( "https://www.youtube.com/watch?v=Jn09UdSb3aA"))
+console.log(isBadURL( "https://www.youtube.com/watch?v=Jn09UdSb3aA"))
+
+
 module.exports = { generateUniqueShortID, isBadURL };

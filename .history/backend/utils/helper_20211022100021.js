@@ -1,5 +1,5 @@
 // const db = require("../models");
-const { Short } = require("../models/short");
+const {Short} = require('../models/short');
 const validUrl = require("valid-url");
 const { customAlphabet } = require("nanoid");
 const nanoid = customAlphabet(
@@ -18,9 +18,8 @@ const generateUniqueShortID = async () => {
 const isBadURL = (url) => {
   if (!validUrl.isUri(url)) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 };
 
 module.exports = { generateUniqueShortID, isBadURL };

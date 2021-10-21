@@ -1,6 +1,5 @@
 const helper = require("../utils/helper");
 const { Short } = require("../models/short");
-const {goodURLs,badURLs} = require('./url.testhelper')
 
 jest.mock("../models/short");
 let spy;
@@ -50,14 +49,4 @@ describe("Test Short ID Generator", () => {
 });
 
 
-describe("Test URL Validator ",()=>{
-  test.each(badURLs)("url (%j) should be bad URL",(url)=>{
-    expect(()=>helper.isBadURL(url)).toBeTruthy()
-  })
-
-  test.each(goodURLs)("url (%j) should be good URL",(url)=>{
-    expect(()=>helper.isBadURL(url)).not.toBe(true)
-  })
-
-
-})
+describe("Test URL  ")

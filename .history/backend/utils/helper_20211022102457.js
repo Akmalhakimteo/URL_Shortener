@@ -23,4 +23,9 @@ const isBadURL = (url) => {
   }
 };
 
+console.log(isBadURL( "https://www.youtube.com/watch?v=Jn09UdSb3aA"))
+console.log(isBadURL( "https://fullstackopen.com/en/part4/testing_the_backend#initializing-the-database-before-tests",
+))
+
+
 module.exports = { generateUniqueShortID, isBadURL };

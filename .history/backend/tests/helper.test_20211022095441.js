@@ -1,6 +1,5 @@
 const helper = require("../utils/helper");
 const { Short } = require("../models/short");
-const {goodURLs,badURLs} = require('./url.testhelper')
 
 jest.mock("../models/short");
 let spy;
@@ -37,27 +36,11 @@ describe("Test Short ID Generator", () => {
       array = [...array, id];
     }
     const isArrayUnique = (arr) => new Set(arr).size === arr.length;
-    expect(isArrayUnique(array)).toBeTruthy();
+    expect(isArrayUnique(array)).toBeTruthy()
   });
 
-  test("if ID is not unique, should generate new ID", async () => {
-    const alternateSpy = jest.spyOn(Short, "findByPk");
-    alternateSpy.mockImplementation(() => Promise.resolve(null));
-    alternateSpy.mockReturnValueOnce(Promise.resolve(1));
-    const id = await helper.generateUniqueShortID();
-    expect(alternateSpy).toHaveBeenCalledTimes(2);
-  });
+  test("if ID is not unique, should generate new ID", async() => {
+      const alternateSpy = jest.spy
+  })
+
 });
-
-
-describe("Test URL Validator ",()=>{
-  test.each(badURLs)("url (%j) should be bad URL",(url)=>{
-    expect(()=>helper.isBadURL(url)).toBeTruthy()
-  })
-
-  test.each(goodURLs)("url (%j) should be good URL",(url)=>{
-    expect(()=>helper.isBadURL(url)).not.toBe(true)
-  })
-
-
-})

@@ -52,7 +52,7 @@ describe("Test Short ID Generator", () => {
 
 describe("Test URL Validator ",()=>{
   test.each(badURLs)("url (%j) should be bad URL",(url)=>{
-    expect(()=>helper.isBadURL(url)).toBeTruthy()
+    expect((url)=>helper.isBadURL(url)).toBe(true)
   })
 
   test.each(goodURLs)("url (%j) should be good URL",(url)=>{

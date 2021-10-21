@@ -1,0 +1,33 @@
+const helper = require("../utils/helper");
+const { Short } = require("../models/short");
+
+jest.mock("../models/short");
+let spy;
+describe("Test Short ID Generator", () => {
+  beforeEach(() => {
+    spy = jest.spyOn(Short, "findByPk");
+    spy.mockImplementation(() => Promise.resolve(null));
+  });
+  afterEach(() => {
+    spy.mockRestore();
+  });
+  test("each generated ID must not be null", async () => {
+    const id = await helper.generateUniqueShortID();
+    expect(spy).toHaveBeenCalled();
+    expect(id).toBeTruthy();
+  });
+
+  test("each generated ID must be a string", async () => {
+    const id = await helper.generateUniqueShortID();
+    expect(spy).toHaveBeenCalled();
+    expect(typeof id).toBe("string");
+  });
+
+  test("each generated ID must be exactly 7 characters long", async () => {
+    const id = await helper.generateUniqueShortID();
+    expect(spy).toHaveBeenCalled();
+    expect(id).toHaveLength(7);
+  });
+
+  test("all generated IDs must be unique", )
+});

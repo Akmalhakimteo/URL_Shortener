@@ -23,4 +23,6 @@ const isBadURL = (url) => {
   }
 };
 
+console.log(isBadURL())
+
 module.exports = { generateUniqueShortID, isBadURL };
