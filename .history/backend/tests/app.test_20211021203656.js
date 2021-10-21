@@ -1,7 +1,8 @@
 jest.useFakeTimers()
-const Short = require('../models/short.model')
+const {Short} = require('../models/short')
 const supertest = require('supertest')
 const app = require('../app')
+const api = 
 
 
 
