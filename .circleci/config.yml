@@ -1,0 +1,21 @@
+version: 2.1
+
+workflows:
+  test-deploy:
+  jobs:
+    - test
+
+jobs:
+  test:
+    working_directory: ~/repo/backend
+    docker:
+    - image: cimg/node:17.0.1
+    steps:
+    - checkout:
+       path: ~/repo
+    - run:
+      name: Install dependencies
+      command: npm install
+    - run:
+      name: Run tests
+      command: npm run test
