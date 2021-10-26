@@ -27,7 +27,7 @@ function App() {
         const newURL = { id, ...data };
         console.log(data);
         setPreviousURLs([...previousURLs, newURL]);
-      }else if(res.status===401){
+      }else if(res.status==401){
         alert("Please ensure that your link starts with 'http' or https'!")
       }else{
         alert("Please ensure that that is an actual link")
