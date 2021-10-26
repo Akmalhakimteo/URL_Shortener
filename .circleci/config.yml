@@ -9,7 +9,14 @@ jobs:
   test:
     working_directory: ~/repo/backend
     docker:
-      - image: cimg/node:14.13.0
+      - image: cimg/node:17.0.1
     steps:
       - checkout
-      - run: node --version
+      - run:
+        name: Install dependencies
+        command: npm install
+      - run: 
+        name: run tests
+        command: npm run test
+        
+      
