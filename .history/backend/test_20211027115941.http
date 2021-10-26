@@ -35,3 +35,10 @@ Content-Type: application/json
     "longURL":"www.youtube.com/watch?v=Z57566JBaZQ"
 }
 
+###
+POST http://localhost:5000/
+Content-Type: application/json
+
+{
+    "actualURL":"https://aws.amazon.com/getting-started/hands-on/deploy-docker-containers/"
+}
