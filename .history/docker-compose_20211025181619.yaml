@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  mysql-db:
+    build: 
+      context: ./backend/database
+      dockerfile: Dockerfile
+    container_name: mysql-db
+    environment:
+      - SQL_USER=root
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DB= testdb
+    ports:
+      - 3306:3306
+
+
+
+

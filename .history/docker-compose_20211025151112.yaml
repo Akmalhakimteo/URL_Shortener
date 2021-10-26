@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8080:8080"
+    container_name: shortener-backend
+    environment:
+      - PORT= 8080
+      - SQL_IP= localhost
+      - SQL_USER= root
+      - SQL_PASSWORD= 123456
+      - SQL_DB= testdb
+      - HOST= mysql-db
+    depends_on:
+      - database
+
+  database:
+    image: mysql:8.0.26
+    container_name: mysql-db
+    environment:
+      - SQL_USER root
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DB= testdb
+    ports:
+      - 3306:3306

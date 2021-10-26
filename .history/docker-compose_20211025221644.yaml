@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  mysql-db:
+    build: 
+      context: ./backend/database
+      dockerfile: Dockerfile
+    container_name: mysql-db
+    environment:
+      - SQL_USER=root
+      - SQL_PASSWORD=123456
+      - SQL_USER=root
+      - SQL_DB= testdb
+    ports:
+      - 3306:3306
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    container_name: shortener-backend
+    environment:
+      - PORT= 8080
+      - SQL_IP= mysql-db
+      - SQL_USER= root
+      - SQL_PASSWORD= 123456
+      - SQL_DB= testdb
+      - HOST= mysql-
+    depends_on:
+      - mysql-db
+
+
+
+

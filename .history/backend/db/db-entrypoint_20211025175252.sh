@@ -1,0 +1,1 @@
+mysqldump -h root -u localhost -p --no-data <schema_name> > schema.sql
