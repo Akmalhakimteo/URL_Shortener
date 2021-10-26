@@ -11,8 +11,8 @@ jobs:
     docker:
       - image: cimg/node:17.0.1
     steps:
-      - checkout
-        path: ~/repo
+      - checkout:
+         path: ~/repo
       - run:
           name: Install dependencies
           command: npm install
