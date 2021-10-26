@@ -4,6 +4,7 @@ import ShortenURL from "./components/ShortenURL";
 import History from "./components/History";
 import PreviousURLs from "./components/PreviousURLs";
 import { useState } from "react";
+require("dotenv").config();
 
 import Footer from "./components/Footer";
 function App() {

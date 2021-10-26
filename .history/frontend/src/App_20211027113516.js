@@ -1,11 +1,9 @@
 import Header from "./components/Header";
-import Button from "./components/Button";
 import ShortenURL from "./components/ShortenURL";
-import History from "./components/History";
 import PreviousURLs from "./components/PreviousURLs";
 import { useState } from "react";
-
 import Footer from "./components/Footer";
+require("dotenv").config();
 function App() {
   const [previousURLs, setPreviousURLs] = useState([
   ]);
@@ -14,7 +12,7 @@ function App() {
     const id = Math.floor(Math.random() * 10000) + 1;
 
     try {
-      const res = await fetch(`http://localhost:8080/api/url/shorten`, {
+      const res = await fetch(`http://${process.env.BASEURL}:${process.env.APIPORT}/api/url/shorten`, {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -22,12 +20,12 @@ function App() {
         },
         body: JSON.stringify(url),
       });
-      if(res.status==200){
+      if(res.status===200){
         const data = await res.json();
         const newURL = { id, ...data };
         console.log(data);
         setPreviousURLs([...previousURLs, newURL]);
-      }else if(res.status==401){
+      }else if(res.status===401){
         alert("Please ensure that your link starts with 'http' or https'!")
       }else{
         alert("Please ensure that that is an actual link")

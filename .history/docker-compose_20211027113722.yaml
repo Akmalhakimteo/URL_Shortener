@@ -12,7 +12,8 @@ services:
       - SQL_DB=testdb
     ports:
       - 3306:3306
-
+    expose:
+      - 3306
 
   backend:
     build:

@@ -8,6 +8,7 @@ import { useState } from "react";
 import Footer from "./components/Footer";
 function App() {
   const [previousURLs, setPreviousURLs] = useState([
+
   ]);
 
   const shortenURL = async (url) => {

@@ -13,7 +13,6 @@ services:
     ports:
       - 3306:3306
 
-
   backend:
     build:
       context: ./backend
@@ -37,4 +36,11 @@ services:
         dockerfile: Dockerfile
     ports:
       - "3000:3000"
+    environment:
+      - PORT=3000
+      - SQL_IP=mysql-db
+      - SQL_USER=root
+      - SQL_PASSWORD=123456
+      - SQL_DB=testdb
+      - HOST=mysql-db
 

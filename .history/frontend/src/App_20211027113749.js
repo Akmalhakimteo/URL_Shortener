@@ -4,8 +4,8 @@ import ShortenURL from "./components/ShortenURL";
 import History from "./components/History";
 import PreviousURLs from "./components/PreviousURLs";
 import { useState } from "react";
-
 import Footer from "./components/Footer";
+require("dotenv").config();
 function App() {
   const [previousURLs, setPreviousURLs] = useState([
   ]);

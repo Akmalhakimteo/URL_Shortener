@@ -8,6 +8,18 @@ import { useState } from "react";
 import Footer from "./components/Footer";
 function App() {
   const [previousURLs, setPreviousURLs] = useState([
+    // {
+    //   id: 1,
+    //   shortURL: "bit.ly/122dfa",
+    //   actualURL:
+    //     "https://www.notion.so/Docker-Containers-3a875a6e9da343fda627775d77ae3290",
+    // },
+    // {
+    //   id: 2,
+    //   shortURL: "bit.ly/1s2xda",
+    //   actualURL:
+    //     "https://www.notion.so/Docker-Containers-3a875a6e9da343fda627775d77ae3290",
+    // },
   ]);
 
   const shortenURL = async (url) => {
