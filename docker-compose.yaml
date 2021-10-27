@@ -13,14 +13,13 @@ services:
     ports:
       - 3306:3306
 
-
-  backend:
+  shortener:
+    container_name: shortener
     build:
       context: ./backend
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
-    container_name: shortener-backend
     environment:
       - PORT=8080
       - SQL_IP=mysql-db
@@ -30,11 +29,3 @@ services:
       - HOST=mysql-db
     depends_on:
       - mysql-db
-  
-  frontend:
-    build:
-        context: ./frontend
-        dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
-

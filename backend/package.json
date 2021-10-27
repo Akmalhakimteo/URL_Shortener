@@ -4,9 +4,10 @@
   "description": "Backend for GOVTECH Take home assignment. Node.js REST APIs with Express, Sequelize & MySQL",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production sleep 18 && node index",
+    "start": "cross-env NODE_ENV=production sleep 25 && node index",
     "dev": "cross-env NODE_ENV=development nodemon index",
-    "test": "cross-env NODE_ENV=test jest --verbose --runInBand"
+    "test": "cross-env NODE_ENV=test jest --verbose --runInBand",
+    "build": "rm -rf build && cd ../frontend/ && npm install && npm run build && cp -r build ../backend"
   },
   "author": "akmalhakimteo",
   "license": "ISC",

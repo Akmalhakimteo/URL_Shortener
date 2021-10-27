@@ -17,7 +17,10 @@ jobs:
           name: Install dependencies
           command: npm install
       - run: 
-          name: run tests
+          name: run tests backend
           command: npm run test
+      - run:
+          name: rebuild frontend statics
+          command: npm run build
         
       

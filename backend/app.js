@@ -19,10 +19,7 @@ config.sequelize.authenticate()
   process.exit(1)
 })
 
-app.get("/", (req, res) => {
-  res.redirect("http://localhost:3000");
-  // res.json({ message: "Welcome to Akmal's URL Shortener" });
-});
+app.use(express.static("build"));
 app.use("/", require("./controllers/index"));
 app.use("/api/url", require("./controllers/url"));
 app.use(utils.malformedURL);
