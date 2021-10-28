@@ -1,13 +1,14 @@
 import React from "react";
 import Button from "./Button";
 const PreviousURL = ({ previousURL }) => {
+  const link = "//"+previousURL.shortURL
   return (
     <div className="task">
       <div className="overflow">
         <h3>
           <a
             className="link"
-            href={previousURL.shortURL}
+            href={link}
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -20,7 +21,7 @@ const PreviousURL = ({ previousURL }) => {
         text="copy"
         onClick={() => {
           navigator.clipboard.writeText(previousURL.shortURL);
-          alert(`copied to clipboard`)
+          alert(`copied to clipboard`);
         }}
       />
     </div>

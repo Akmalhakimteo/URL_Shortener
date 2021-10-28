@@ -7,7 +7,7 @@ const PreviousURL = ({ previousURL }) => {
         <h3>
           <a
             className="link"
-            href={previousURL.shortURL}
+            href={"https://"+previousURL.shortURL}
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -20,7 +20,7 @@ const PreviousURL = ({ previousURL }) => {
         text="copy"
         onClick={() => {
           navigator.clipboard.writeText(previousURL.shortURL);
-          alert(`copied to clipboard`)
+          alert(`copied to clipboard`);
         }}
       />
     </div>

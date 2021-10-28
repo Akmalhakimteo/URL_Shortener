@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Button";
 const PreviousURL = ({ previousURL }) => {
+  const link = 
   return (
     <div className="task">
       <div className="overflow">
@@ -20,7 +21,7 @@ const PreviousURL = ({ previousURL }) => {
         text="copy"
         onClick={() => {
           navigator.clipboard.writeText(previousURL.shortURL);
-          alert(`copied to clipboard`)
+          alert(`copied to clipboard`);
         }}
       />
     </div>

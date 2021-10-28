@@ -20,7 +20,7 @@ const PreviousURL = ({ previousURL }) => {
         text="copy"
         onClick={() => {
           navigator.clipboard.writeText(previousURL.shortURL);
-          alert(`copied to clipboard`)
+          alert(`copied to clipboard`);
         }}
       />
     </div>
