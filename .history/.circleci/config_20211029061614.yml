@@ -36,8 +36,7 @@ jobs:
           name: rebuild frontend statics
           command: npm run build
       - run: 
-          name: ensure docker started
-          command: systemctl start docker
+          name: 
       - run:
           name: Build docker image
           command: docker build -t akmalhakimteo/akmal-url-shortener:version1.0.$CIRCLE_BUILD_NUM .
