@@ -4,7 +4,11 @@ workflows:
   test-deploy:
     jobs:
       - test
-      - build
+      - build:
+          requires:
+            - test
+          
+
 
 jobs:
   test:
@@ -32,8 +36,8 @@ jobs:
       - run:
           name: Build docker image
           command: docker build -t akmalhakimteo/akmal-url-shortener:version1.0
-    requires:
-      - test
+    
+    
 
         
       
