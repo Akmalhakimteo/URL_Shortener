@@ -37,7 +37,7 @@ jobs:
           command: npm run build
       - run:
           name: Build docker image
-          command: docker build -t akmalhakimteo/akmal-url-shortener:version1.0
+          command: docker build -t akmalhakimteo/akmal-url-shortener:version1.0 .
     
     
 
