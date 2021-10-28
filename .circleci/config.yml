@@ -34,8 +34,6 @@ jobs:
          path: ~/repo
       - setup_remote_docker:
           docker_layer_caching: false
-      - run: |
-          command: echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
       - run:
           name: rebuild frontend statics
           command: npm run build
@@ -46,8 +44,10 @@ jobs:
           name: Tagging docker image
           command: docker tag akmal-url-shortener akmalhakimteo/akmal-url-shortener:version1.0.$CIRCLE_BUILD_NUM
       - run:
-          name: Push Docker Image
-          command: docker push akmalhakimteo/akmal-url-shortener:version1.0.$CIRCLE_BUILD_NUM
+          name: Publish Docker Image to Docker Hub
+          command: |
+            echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+            docker push akmalhakimteo/akmal-url-shortener:version1.0.$CIRCLE_BUILD_NUM
 
     
 
