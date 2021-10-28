@@ -28,7 +28,7 @@ Content-Type: application/json
 }
 
 ###
-POST http://13.229.207.20:80/api/url/shorten
+POST http://localhost:8080/api/url/shorten
 Content-Type: application/json
 
 {

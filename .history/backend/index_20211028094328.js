@@ -2,9 +2,9 @@
 const app = require("./app");
 const http = require("http");
 // const https = require("https");
-// const privateKey = fs.readFileSync('./www.akmalteo_xyz.key');
-// const certificate = fs.readFileSync('./www_akmalteo_xyz.crt');
-// const credentials = {key: privateKey, cert: certificate};
+const privateKey = fs.readFileSync('./www.akmalteo_xyz.key');
+const certificate = fs.readFileSync('./www_akmalteo_xyz.crt');
+const credentials = {key: privateKey, cert: certificate};
 
 const config = require("./config/db.config");
 const logger = require("./utils/logger");
