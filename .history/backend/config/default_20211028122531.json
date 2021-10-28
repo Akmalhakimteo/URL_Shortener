@@ -1,0 +1,5 @@
+{
+    "baseUrl":"http://localhost:8080" ,
+    // "baseUrl":"akmalteo.xyz" ,
+    "fronendURL":"http://localhost:3000"
+}

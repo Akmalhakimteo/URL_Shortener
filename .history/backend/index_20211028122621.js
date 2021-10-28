@@ -4,8 +4,8 @@ const http = require("http");
 // const https = require("https");
 // const privateKey = fs.readFileSync('./www.akmalteo_xyz.key');
 // const certificate = fs.readFileSync('./www_akmalteo_xyz.crt');
-// const bundle = fs.readFileSync('./www_akmalteo_xyz.ca-bundle');
-// const credentials = {key: privateKey, cert: certificate, ca:bundle};
+//const bundle = fs.readFileSync('./www_akmalteo_xyz.ca-bundle');
+// const credentials = {key: privateKey, cert: certificate};
 
 const config = require("./config/db.config");
 const logger = require("./utils/logger");

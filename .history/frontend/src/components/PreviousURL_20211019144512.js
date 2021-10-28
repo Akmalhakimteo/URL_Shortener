@@ -16,7 +16,7 @@ const PreviousURL = ({ previousURL }) => {
         </h3>
         <p className="overflow">{previousURL.actualURL}</p>
       </div>
-      <Button 
+      <Button
         text="copy"
         onClick={() => {
           navigator.clipboard.writeText(previousURL.shortURL);
