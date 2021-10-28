@@ -30,6 +30,8 @@ jobs:
     docker:
       - image: cimg/node:16.12.0
     steps:
+      - setup_remote_docker:
+          version: 19.03.13
       - checkout:
          path: ~/repo
       - run:
