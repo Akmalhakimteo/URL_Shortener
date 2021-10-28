@@ -30,6 +30,8 @@ jobs:
     docker:
       - image: cimg/node:16.12.0
     steps:
+      - checkout:
+         path: ~/repo
       - run:
           name: rebuild frontend statics
           command: npm run build
