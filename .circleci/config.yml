@@ -33,7 +33,7 @@ jobs:
       - checkout:
          path: ~/repo
       - setup_remote_docker:
-          docker_layer_caching: true
+          docker_layer_caching: false
       - run:
           name: rebuild frontend statics
           command: npm run build
