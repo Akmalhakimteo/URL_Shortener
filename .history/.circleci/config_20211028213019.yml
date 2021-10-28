@@ -26,14 +26,9 @@ jobs:
     docker:
       -image: cimg/node:16.12.0
     steps:
-      - run:
+    - run:
           name: rebuild frontend statics
           command: npm run build
-      - run:
-          name: Build docker image
-          command: docker build -t akmalhakimteo/akmal-url-shortener:version1.0
-    requires:
-      - test
 
         
       
