@@ -39,7 +39,10 @@ jobs:
           command: npm run build
       - run:
           name: Build docker image
-          command: docker build -t akmalhakimteo/akmal-url-shortener:version1.0.$CIRCLE_BUILD_NUM .
+          command: docker build -t akmal-url-shortener . 
+      - run:
+          name: Tagging docker image
+          command: docker tag akmal-url-shortener akmalhakimteo/akmal-url-shortener:version1.0.$CIRCLE_BUILD_NUM
       - run:
           name: Push Docker Image
           command: docker push akmalhakimteo/akmal-url-shortener:version1.0.$CIRCLE_BUILD_NUM
