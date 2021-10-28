@@ -16,7 +16,7 @@ services:
       - mysql-db-data:/var/lib/mysql
 
   shortener:
-    image: akmalhakimteo/akmal-url-shortener:version1.0.49
+    image: akmalhakimteo/akmal-url-shortener:version1.0
     container_name: shortener
     ports:
       - "8080:8080"
@@ -28,7 +28,8 @@ services:
       - SQL_DB=testdb
       - HOST=mysql-db
     depends_on:
-      - mysql-db
+      mysql-db:
+        condition: service_healthy
 
 volumes:
   mysql-db-data:
