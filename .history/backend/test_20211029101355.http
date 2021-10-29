@@ -15,7 +15,7 @@ POST http://localhost:8080/api/url/shorten
 Content-Type: application/json
 
 {
-    "longURL":"https://developer.ibm.com/tutorials/docker-dev-db/"
+    "longURL":"https://shopee.sg/%F0%9F%87%B8%F0%9F%87%AC-LOCAL-SELLER-Laptop-Stand-Foldable-Adjustable-Height-Laptop-Stand-Fits-all-Laptop-including-MacBook-i.360913914.10433386171"
 }
 
 
