@@ -137,6 +137,8 @@ If you do not have node, please install it [here](https://nodejs.org/en/download
 3. Run the cypress test scripts
 `npm run cypress:open`
 
+`Note`:Please Ensure that you run `docker-compose up -d` before running the Cypress tests 
+
 
 
 
