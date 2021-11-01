@@ -22,8 +22,10 @@ If you do not have them, you may install them [here](https://docs.docker.com/get
 2. Go into the parent directory
 `cd URL_Shortener`
 
-3. Run the application!
+3. Run the application! (`Note`: Please ensure that you have ports 8080 & 3306 free)
 `docker-compose up -d`
+
+
 
 
 The application should be running for you on http://localhost:8080/
